@@ -205,25 +205,14 @@
 		D56185321B5EDEBA004ABB9B /* Main App */ = {
 			isa = PBXGroup;
 			children = (
-				D561853A1B5EDEBA004ABB9B /* Classes */,
-				D56185331B5EDEBA004ABB9B /* AppDelegate.h */,
-				D56185341B5EDEBA004ABB9B /* AppDelegate.m */,
-				D56185351B5EDEBA004ABB9B /* Assets.xcassets */,
+				D594118A1B601BAA00E3D6D2 /* Models */,
+				D59411891B601B0000E3D6D2 /* Resources */,
+				D59411881B601A3D00E3D6D2 /* Controllers */,
+				D59411871B60190700E3D6D2 /* Application */,
 				D56185361B5EDEBA004ABB9B /* LaunchScreen.storyboard */,
 				D56185381B5EDEBA004ABB9B /* Main.storyboard */,
-				D561853B1B5EDEBA004ABB9B /* Info.plist */,
-				D561853C1B5EDEBA004ABB9B /* main.m */,
-				D561853D1B5EDEBA004ABB9B /* ViewController.h */,
-				D561853E1B5EDEBA004ABB9B /* ViewController.m */,
 			);
 			path = "Main App";
-			sourceTree = "<group>";
-		};
-		D561853A1B5EDEBA004ABB9B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		D56185511B5EE2AD004ABB9B /* Shared Framework Code */ = {
@@ -241,6 +230,41 @@
 			);
 			name = "TherewegoKit Framework (iOS)";
 			path = "TherewegoKit Framework";
+			sourceTree = "<group>";
+		};
+		D59411871B60190700E3D6D2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D561853B1B5EDEBA004ABB9B /* Info.plist */,
+				D561853C1B5EDEBA004ABB9B /* main.m */,
+				D56185331B5EDEBA004ABB9B /* AppDelegate.h */,
+				D56185341B5EDEBA004ABB9B /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D59411881B601A3D00E3D6D2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D561853D1B5EDEBA004ABB9B /* ViewController.h */,
+				D561853E1B5EDEBA004ABB9B /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D59411891B601B0000E3D6D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D56185351B5EDEBA004ABB9B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D594118A1B601BAA00E3D6D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D5A75F351B600BF900C444DF /* Therewego Watch App */ = {
@@ -719,7 +743,7 @@
 			baseConfigurationReference = F5B4A70C61BADC53661FD9DB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/Therewego iOS App/Main App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Therewego iOS App/Main App/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.therewego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -731,7 +755,7 @@
 			baseConfigurationReference = 4E5F4913EC6336B67BB2BAFE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/Therewego iOS App/Main App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Therewego iOS App/Main App/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.therewego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
