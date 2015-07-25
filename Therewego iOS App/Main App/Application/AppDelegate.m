@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  therewego
 //
-//  Created by Dober on 7/21/15.
+//  Created by Dmitry Gutsulyak on 7/21/15.
 //  Copyright © 2015 SHAPE GmbH. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "Constants.h"
 @import GoogleMaps;
 
 @interface AppDelegate ()
@@ -17,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [GMSServices provideAPIKey:@"AIzaSyA75bEdriappo-mQ0MrFfWriW1um8UmzTE"];
+    [GMSServices provideAPIKey:TWGiOSApiKey];
     
     return YES;
 }
