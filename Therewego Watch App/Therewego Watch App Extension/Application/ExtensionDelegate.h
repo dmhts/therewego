@@ -7,8 +7,11 @@
 //
 
 @import WatchConnectivity;
+#import <CoreLocation/CoreLocation.h>
 #import <WatchKit/WatchKit.h>
 
-@interface ExtensionDelegate : NSObject <WKExtensionDelegate,WCSessionDelegate>
+@interface ExtensionDelegate : NSObject <WKExtensionDelegate, WCSessionDelegate>
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end

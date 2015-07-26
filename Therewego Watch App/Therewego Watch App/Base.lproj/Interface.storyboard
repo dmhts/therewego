@@ -5,23 +5,25 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8083.2"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Root Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller id="AgC-eL-Hgc" customClass="RootInterfaceController">
                     <items>
                         <button width="1" alignment="left" title="Get GPS" id="7tL-kO-gN0">
                             <connections>
                                 <action selector="didTapButton" destination="AgC-eL-Hgc" id="G66-Jp-J4y"/>
                             </connections>
                         </button>
+                        <map height="155" alignment="left" id="CUp-hJ-O0a"/>
                     </items>
                     <connections>
                         <outlet property="gpsButton" destination="7tL-kO-gN0" id="xUl-bi-m33"/>
+                        <outlet property="map" destination="CUp-hJ-O0a" id="4QD-zb-fKM"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="364"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

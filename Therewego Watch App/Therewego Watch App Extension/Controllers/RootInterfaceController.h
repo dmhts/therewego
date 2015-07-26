@@ -6,14 +6,18 @@
 //  Copyright © 2015 SHAPE GmbH. All rights reserved.
 //
 
-#import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
-#import "ExtensionDelegate.h"
+#import <WatchKit/WatchKit.h>
+#import "TWGDataProvider.h"
 
-@interface InterfaceController : WKInterfaceController
+@interface RootInterfaceController : WKInterfaceController <CLLocationManagerDelegate>
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *gpsButton;
 
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
 - (IBAction)didTapButton;
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceMap *map;
 
 @end

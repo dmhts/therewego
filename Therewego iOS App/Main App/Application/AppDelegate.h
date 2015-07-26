@@ -9,7 +9,7 @@
 @import WatchConnectivity;
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,WCSessionDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, WCSessionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

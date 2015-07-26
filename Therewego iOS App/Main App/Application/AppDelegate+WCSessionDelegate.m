@@ -10,8 +10,6 @@
 
 @implementation AppDelegate (WCSessionDelegate)
 
--(void)session:(nonnull WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)message {
-    // TODO: Think up some optimization that will allow to reply to the Watch with the same callback. It maybe some kind of caching of GPS data.
-}
+-(void)session:(nonnull WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)message {}
 
 @end

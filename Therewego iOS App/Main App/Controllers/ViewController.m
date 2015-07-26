@@ -12,17 +12,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    CLLocationCoordinate2D points[0];
-    points[0] = CLLocationCoordinate2DMake(-33.8670522, 151.1957362);
-    
-    NSArray *types = @[@"train_station"];
-    
-    TWGDataProvider *dataProvider = [TWGDataProvider new];
-    
-    [dataProvider getNearbyPlacesByCoordinates:&points[0] inRadius:500 withTypes:types onCompletion:^void(NSArray *places) {
-        // TODO: Transfer derived data to Watch.
-    }];
 }
 
 - (void)didReceiveMemoryWarning {
