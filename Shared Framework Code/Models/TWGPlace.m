@@ -40,7 +40,7 @@
             // TODO: Move coordinate deriving to a separate method.
             double latitude = [self deriveCoordinateFrom:placeDictionary coordinate:@"lat"];
             double longitude = [self deriveCoordinateFrom:placeDictionary coordinate:@"lng"];
-            self.location = @{@"longitude": [NSNumber numberWithDouble:latitude], @"latitude": [NSNumber numberWithDouble:longitude]};
+            self.location = @{@"latitude": [NSNumber numberWithDouble:latitude], @"longitude": [NSNumber numberWithDouble:longitude]};
             
             // TODO: Move photo deriving to a separate method.
             // TODO: It is possible to store multiple photo references and thus images.

@@ -13,6 +13,7 @@
 /**
     The model class that represent a Google Place model described in details here https://developers.google.com/places/webservice/search#PlaceSearchResponses
     The class can be extended with additional fields from aforementioned model in the future.
+    // TODO: Implement the NSCoder protocol to be able to serialize the object.
  */
 @interface TWGPlace : NSObject
 
