@@ -2,7 +2,7 @@
 //  ExtensionDelegate.m
 //  watchapp Extension
 //
-//  Created by Dober on 7/22/15.
+//  Created by Dmitry Gutsulyak on 7/22/15.
 //  Copyright © 2015 SHAPE GmbH. All rights reserved.
 //
 
@@ -11,7 +11,9 @@
 @implementation ExtensionDelegate
 
 - (void)applicationDidFinishLaunching {
-    // Perform any final initialization of your application.
+    // Session objects are always available on Apple Watch thus there is no use in calling +isSupported method.
+    [WCSession defaultSession].delegate = self;
+    [[WCSession defaultSession] activateSession];
 }
 
 - (void)applicationDidBecomeActive {

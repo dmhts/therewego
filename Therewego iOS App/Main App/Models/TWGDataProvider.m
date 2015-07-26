@@ -90,9 +90,6 @@
         } else {
             // TODO: Process a serialization error.
         }
-        
-        //NSString *strData = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-        //NSLog(@"%@",strData);
     }];
     
     [nearbyPlacesTask resume];

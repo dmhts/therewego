@@ -20,6 +20,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [GMSServices provideAPIKey:TWGiOSApiKey];
     
+    // Whether the current iOS device is able to use a session object.
+    if ([WCSession isSupported]) {
+        [WCSession defaultSession].delegate = self;
+        [[WCSession defaultSession] activateSession];
+    }
+    
     return YES;
 }
 

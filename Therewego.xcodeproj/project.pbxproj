@@ -33,6 +33,8 @@
 		D5CFE3081B63CC0B00E1683C /* TWGPlace.h in Headers */ = {isa = PBXBuildFile; fileRef = D594118F1B61729E00E3D6D2 /* TWGPlace.h */; };
 		D5CFE3091B63CC1100E1683C /* TWGPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = D59411901B61729E00E3D6D2 /* TWGPlace.m */; };
 		D5CFE30A1B63CC1200E1683C /* TWGPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = D59411901B61729E00E3D6D2 /* TWGPlace.m */; };
+		D5CFE3171B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CFE3161B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.m */; };
+		D5CFE3191B640AC300E1683C /* AppDelegate+WCSessionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CFE3181B640AC300E1683C /* AppDelegate+WCSessionDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,10 @@
 		D5A75F641B600FD800C444DF /* TherewegoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TherewegoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A75F661B600FD800C444DF /* TherewegoKitWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TherewegoKitWatch.h; sourceTree = "<group>"; };
 		D5A75F681B600FD800C444DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5CFE3151B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExtensionDelegate+WCSessionDelegate.h"; sourceTree = "<group>"; };
+		D5CFE3161B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExtensionDelegate+WCSessionDelegate.m"; sourceTree = "<group>"; };
+		D5CFE3181B640AC300E1683C /* AppDelegate+WCSessionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+WCSessionDelegate.m"; sourceTree = "<group>"; };
+		D5CFE31A1B640B4300E1683C /* AppDelegate+WCSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+WCSessionDelegate.h"; sourceTree = "<group>"; };
 		F5B4A70C61BADC53661FD9DB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +258,8 @@
 				D561853C1B5EDEBA004ABB9B /* main.m */,
 				D56185331B5EDEBA004ABB9B /* AppDelegate.h */,
 				D56185341B5EDEBA004ABB9B /* AppDelegate.m */,
+				D5CFE31A1B640B4300E1683C /* AppDelegate+WCSessionDelegate.h */,
+				D5CFE3181B640AC300E1683C /* AppDelegate+WCSessionDelegate.m */,
 				D59411921B62AED500E3D6D2 /* Constants.h */,
 				D59411931B62AF4400E3D6D2 /* Constants.m */,
 			);
@@ -298,10 +306,11 @@
 		D5A75F441B600BF900C444DF /* Therewego Watch App Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D5A75F471B600BF900C444DF /* InterfaceController.h */,
-				D5A75F481B600BF900C444DF /* InterfaceController.m */,
+				D5CFE31B1B64CEC500E1683C /* Controllers */,
 				D5A75F4A1B600BF900C444DF /* ExtensionDelegate.h */,
 				D5A75F4B1B600BF900C444DF /* ExtensionDelegate.m */,
+				D5CFE3151B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.h */,
+				D5CFE3161B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.m */,
 				D5A75F4D1B600BF900C444DF /* NotificationController.h */,
 				D5A75F4E1B600BF900C444DF /* NotificationController.m */,
 				D5A75F501B600BF900C444DF /* Assets.xcassets */,
@@ -347,6 +356,15 @@
 				D59411901B61729E00E3D6D2 /* TWGPlace.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D5CFE31B1B64CEC500E1683C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5A75F471B600BF900C444DF /* InterfaceController.h */,
+				D5A75F481B600BF900C444DF /* InterfaceController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		FBFA611FA1B6696C76162CB9 /* Pods */ = {
@@ -606,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5CFE3191B640AC300E1683C /* AppDelegate+WCSessionDelegate.m in Sources */,
 				D594118E1B616B3100E3D6D2 /* TWGDataProvider.m in Sources */,
 				D56185441B5EDEBA004ABB9B /* main.m in Sources */,
 				D561853F1B5EDEBA004ABB9B /* AppDelegate.m in Sources */,
@@ -627,6 +646,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5A75F4C1B600BF900C444DF /* ExtensionDelegate.m in Sources */,
+				D5CFE3171B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.m in Sources */,
 				D5A75F491B600BF900C444DF /* InterfaceController.m in Sources */,
 				D5A75F4F1B600BF900C444DF /* NotificationController.m in Sources */,
 			);
