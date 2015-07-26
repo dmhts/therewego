@@ -37,13 +37,10 @@
             self.name = name;
             self.types = types;
             
-            // TODO: Figure out an error at this point.
             // TODO: Move coordinate deriving to a separate method.
-            //CLLocationCoordinate2D points[0];
-            //double latitude = [self deriveCoordinateFrom:placeDictionary coordinate:@"lat"];
-            //double longitude = [self deriveCoordinateFrom:placeDictionary coordinate:@"lng"];
-            //points[0] = CLLocationCoordinate2DMake(latitude, longitude);
-            //self.coordinates = &points[0];
+            double latitude = [self deriveCoordinateFrom:placeDictionary coordinate:@"lat"];
+            double longitude = [self deriveCoordinateFrom:placeDictionary coordinate:@"lng"];
+            self.location = @{@"longitude": [NSNumber numberWithDouble:latitude], @"latitude": [NSNumber numberWithDouble:longitude]};
             
             // TODO: Move photo deriving to a separate method.
             // TODO: It is possible to store multiple photo references and thus images.

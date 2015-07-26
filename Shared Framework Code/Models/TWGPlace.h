@@ -23,7 +23,7 @@
 @property (nonnull) NSString* name;
 
 /// Contains coordinates of the object.
-//@property (nonnull) CLLocationCoordinate2D* coordinates;
+@property (nonnull) NSDictionary* location;
 
 /// Contains the array of feature types. See the list of supported types https://developers.google.com/places/supported_types
 @property (nonnull) NSArray* types;
