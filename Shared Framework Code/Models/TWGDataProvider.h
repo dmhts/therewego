@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Constants.h"
+#import "TWGPlaceCollection.h"
 #import "TWGPlace.h"
 
 /**

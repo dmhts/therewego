@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <WatchKit/WatchKit.h>
+#import "TWGPlaceCollection.h"
 #import "TWGDataProvider.h"
 
 @interface RootInterfaceController : WKInterfaceController <CLLocationManagerDelegate>

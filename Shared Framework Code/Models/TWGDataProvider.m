@@ -63,7 +63,6 @@
     // Send a places info fetching request.
     nearbyPlacesTask = [session dataTaskWithURL:requestUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
-        NSMutableArray *places = [NSMutableArray array];
         NSError *jsonSerializationError;
         
         // Try to derive JSON data.
@@ -75,14 +74,16 @@
             id results = [objectFromJSON objectForKey:@"results"];
             
             if (results) {
+                [[TWGPlaceCollection sharedInstance] clearPlaces];
                 for (id result in results) {
                     TWGPlace *place = [[TWGPlace alloc] initWithDictionary:(NSDictionary *)result];
                     
                     // TODO: Add photo fetching.
-                    [places addObject:place];
+                    
+                    [[TWGPlaceCollection sharedInstance] addPlace:place];
                 }
                 
-                completion(places);
+                completion([TWGPlaceCollection sharedInstance].places);
             } else {
                 // TODO: Process an absent key error.
             }

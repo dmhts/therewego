@@ -44,6 +44,10 @@
 		D5D092B31B653C37008062CF /* TherewegoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A75F641B600FD800C444DF /* TherewegoKit.framework */; };
 		D5D092B41B653C37008062CF /* TherewegoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5A75F641B600FD800C444DF /* TherewegoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5D092BE1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D092BD1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m */; };
+		D5D092C21B657D6A008062CF /* TWGPlaceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D092C01B657D6A008062CF /* TWGPlaceCollection.h */; };
+		D5D092C31B657D6A008062CF /* TWGPlaceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D092C01B657D6A008062CF /* TWGPlaceCollection.h */; };
+		D5D092C41B657D6A008062CF /* TWGPlaceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D092C11B657D6A008062CF /* TWGPlaceCollection.m */; };
+		D5D092C51B657D6A008062CF /* TWGPlaceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D092C11B657D6A008062CF /* TWGPlaceCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +174,8 @@
 		D5CFE31A1B640B4300E1683C /* AppDelegate+WCSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+WCSessionDelegate.h"; sourceTree = "<group>"; };
 		D5D092BC1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RootInterfaceController+CLLocationManagerDelegate.h"; sourceTree = "<group>"; };
 		D5D092BD1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RootInterfaceController+CLLocationManagerDelegate.m"; sourceTree = "<group>"; };
+		D5D092C01B657D6A008062CF /* TWGPlaceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWGPlaceCollection.h; sourceTree = "<group>"; };
+		D5D092C11B657D6A008062CF /* TWGPlaceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWGPlaceCollection.m; sourceTree = "<group>"; };
 		F5B4A70C61BADC53661FD9DB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -376,10 +382,12 @@
 		D5CFE3061B63CB7E00E1683C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D594118C1B61693C00E3D6D2 /* TWGDataProvider.h */,
-				D594118D1B616B3100E3D6D2 /* TWGDataProvider.m */,
+				D5D092C01B657D6A008062CF /* TWGPlaceCollection.h */,
+				D5D092C11B657D6A008062CF /* TWGPlaceCollection.m */,
 				D594118F1B61729E00E3D6D2 /* TWGPlace.h */,
 				D59411901B61729E00E3D6D2 /* TWGPlace.m */,
+				D594118C1B61693C00E3D6D2 /* TWGDataProvider.h */,
+				D594118D1B616B3100E3D6D2 /* TWGDataProvider.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -434,6 +442,7 @@
 				D5D092AB1B6537E6008062CF /* TWGDataProvider.h in Headers */,
 				D56185661B5FFFCD004ABB9B /* TherewegoKit.h in Headers */,
 				D5D092AF1B65381E008062CF /* Constants.h in Headers */,
+				D5D092C21B657D6A008062CF /* TWGPlaceCollection.h in Headers */,
 				D5CFE3071B63CC0900E1683C /* TWGPlace.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +454,7 @@
 				D5D092AC1B6537E7008062CF /* TWGDataProvider.h in Headers */,
 				D5A75F671B600FD800C444DF /* TherewegoKitWatch.h in Headers */,
 				D5D092B01B65381F008062CF /* Constants.h in Headers */,
+				D5D092C31B657D6A008062CF /* TWGPlaceCollection.h in Headers */,
 				D5CFE3081B63CC0B00E1683C /* TWGPlace.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,6 +701,7 @@
 			files = (
 				D5CFE3091B63CC1100E1683C /* TWGPlace.m in Sources */,
 				D5D092AD1B6537EB008062CF /* TWGDataProvider.m in Sources */,
+				D5D092C41B657D6A008062CF /* TWGPlaceCollection.m in Sources */,
 				D5D092B11B653823008062CF /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,6 +724,7 @@
 			files = (
 				D5CFE30A1B63CC1200E1683C /* TWGPlace.m in Sources */,
 				D5D092AE1B6537EC008062CF /* TWGDataProvider.m in Sources */,
+				D5D092C51B657D6A008062CF /* TWGPlaceCollection.m in Sources */,
 				D5D092B21B653825008062CF /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

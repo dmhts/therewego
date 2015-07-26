@@ -8,7 +8,6 @@
 
 #import "RootInterfaceController.h"
 
-
 @interface RootInterfaceController (CLLocationManagerDelegate)
 
 @end
@@ -28,8 +27,13 @@
     NSArray *types = @[@"airport", @"train_station", @"bus_station", @"transit_station"];
     
     [dataProvider getNearbyPlacesByCoordinates:&currentLocation inRadius:5000 withTypes:types onCompletion:^void(NSArray *places) {
-        for (int i = 0; i < 5; i++) {
-            TWGPlace *place = [places objectAtIndex:i];
+        
+        for (int index = 0; index < 5; index++) {
+            TWGPlace *place = [[TWGPlaceCollection sharedInstance] getPlaceBy:index];
+            
+            if (!place) {
+                break;
+            }
             
             CLLocationDegrees latitude = ((NSNumber *)[place.location objectForKey:@"latitude"]).doubleValue;
             CLLocationDegrees longitude = ((NSNumber *)[place.location objectForKey:@"longitude"]).doubleValue;
