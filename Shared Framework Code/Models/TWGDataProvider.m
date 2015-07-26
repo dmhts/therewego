@@ -44,7 +44,7 @@
 - (void)getNearbyPlacesByCoordinates:(CLLocationCoordinate2D *)coordinates inRadius:(double)radius withTypes:(NSArray *)types onCompletion:(void (^)(NSArray *places))completion {
     
     // Compose a request string.
-    NSString* requestString = [NSString stringWithFormat:@"%@json?key=%@&location=%f,%f&radius=%f&types=%@&rankby=prominence&sensor=true",
+    NSString *requestString = [NSString stringWithFormat:@"%@json?key=%@&location=%f,%f&radius=%f&types=%@&rankby=prominence&sensor=true",
                                TWGNearbyPlacesSearchUrl,
                                TWGBrowserApiKey,
                                coordinates->latitude,
@@ -52,8 +52,8 @@
                                radius,
                                [self typesToString:types]];
     
-    // Convert the string to the url object.
-    NSURL *requestUrl = [NSURL URLWithString:requestString];
+    // Encode a request string and convert it to the url object.
+    NSURL *requestUrl = [NSURL URLWithString:[requestString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     
     // Cancel a current task if one is taking place.
     if (nearbyPlacesTask.taskIdentifier > 0 && nearbyPlacesTask.state == NSURLSessionTaskStateRunning) {
