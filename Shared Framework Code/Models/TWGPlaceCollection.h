@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class TWGPlace;
+#import "TWGPlace.h"
 
 // TODO: Add save/load methods to store the collection in a persistent storage.
 /**

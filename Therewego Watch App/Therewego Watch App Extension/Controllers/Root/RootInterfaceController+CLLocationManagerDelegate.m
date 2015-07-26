@@ -20,11 +20,13 @@
     // Since we use only single requests to fetch a current location then it will be sufficient.
     CLLocationCoordinate2D currentLocation = [locations objectAtIndex:0].coordinate;
     
+    currentLocation = CLLocationCoordinate2DMake(46.4667, 30.7333);
+    
     // TODO: Maybe it makes sense to turn the provider into the singleton.
     TWGDataProvider *dataProvider = [TWGDataProvider new];
     
     // TODO: Move places types to user settings.
-    NSArray *types = @[@"airport", @"train_station", @"bus_station", @"transit_station"];
+    NSArray *types = @[@"airport", @"train_station", @"bus_station", @"subway_station"];
     
     [dataProvider getNearbyPlacesByCoordinates:&currentLocation inRadius:5000 withTypes:types onCompletion:^void(NSArray *places) {
         

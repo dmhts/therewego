@@ -27,6 +27,9 @@
 		D5A75F511B600BF900C444DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5A75F501B600BF900C444DF /* Assets.xcassets */; };
 		D5A75F551B600BF900C444DF /* Therewego Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D5A75F341B600BF900C444DF /* Therewego Watch App.app */; };
 		D5A75F671B600FD800C444DF /* TherewegoKitWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A75F661B600FD800C444DF /* TherewegoKitWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5AA8C051B6593B50074436B /* PlacesListInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AA8C041B6593B50074436B /* PlacesListInterfaceController.m */; };
+		D5AA8C081B6595110074436B /* PlaceInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AA8C071B6595110074436B /* PlaceInterfaceController.m */; };
+		D5AA8C0C1B6596550074436B /* PlaceRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AA8C0B1B6596550074436B /* PlaceRowController.m */; };
 		D5CFE3071B63CC0900E1683C /* TWGPlace.h in Headers */ = {isa = PBXBuildFile; fileRef = D594118F1B61729E00E3D6D2 /* TWGPlace.h */; };
 		D5CFE3081B63CC0B00E1683C /* TWGPlace.h in Headers */ = {isa = PBXBuildFile; fileRef = D594118F1B61729E00E3D6D2 /* TWGPlace.h */; };
 		D5CFE3091B63CC1100E1683C /* TWGPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = D59411901B61729E00E3D6D2 /* TWGPlace.m */; };
@@ -157,8 +160,8 @@
 		D5A75F3B1B600BF900C444DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5A75F401B600BF900C444DF /* Therewego Watch App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Therewego Watch App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A75F461B600BF900C444DF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		D5A75F471B600BF900C444DF /* RootInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootInterfaceController.h; sourceTree = "<group>"; };
-		D5A75F481B600BF900C444DF /* RootInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootInterfaceController.m; sourceTree = "<group>"; };
+		D5A75F471B600BF900C444DF /* RootInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RootInterfaceController.h; path = "Therewego Watch App/Therewego Watch App Extension/Controllers/Root/RootInterfaceController.h"; sourceTree = SOURCE_ROOT; };
+		D5A75F481B600BF900C444DF /* RootInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RootInterfaceController.m; path = "Therewego Watch App/Therewego Watch App Extension/Controllers/Root/RootInterfaceController.m"; sourceTree = SOURCE_ROOT; };
 		D5A75F4A1B600BF900C444DF /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
 		D5A75F4B1B600BF900C444DF /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
 		D5A75F4D1B600BF900C444DF /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
@@ -168,12 +171,18 @@
 		D5A75F641B600FD800C444DF /* TherewegoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TherewegoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A75F661B600FD800C444DF /* TherewegoKitWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TherewegoKitWatch.h; sourceTree = "<group>"; };
 		D5A75F681B600FD800C444DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5AA8C031B6593B50074436B /* PlacesListInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlacesListInterfaceController.h; path = "Therewego Watch App/Therewego Watch App Extension/Controllers/PlacesList/PlacesListInterfaceController.h"; sourceTree = SOURCE_ROOT; };
+		D5AA8C041B6593B50074436B /* PlacesListInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlacesListInterfaceController.m; path = "Therewego Watch App/Therewego Watch App Extension/Controllers/PlacesList/PlacesListInterfaceController.m"; sourceTree = SOURCE_ROOT; };
+		D5AA8C061B6595110074436B /* PlaceInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceInterfaceController.h; sourceTree = "<group>"; };
+		D5AA8C071B6595110074436B /* PlaceInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceInterfaceController.m; sourceTree = "<group>"; };
+		D5AA8C0A1B6596550074436B /* PlaceRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceRowController.h; sourceTree = "<group>"; };
+		D5AA8C0B1B6596550074436B /* PlaceRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceRowController.m; sourceTree = "<group>"; };
 		D5CFE3151B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExtensionDelegate+WCSessionDelegate.h"; sourceTree = "<group>"; };
 		D5CFE3161B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExtensionDelegate+WCSessionDelegate.m"; sourceTree = "<group>"; };
 		D5CFE3181B640AC300E1683C /* AppDelegate+WCSessionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+WCSessionDelegate.m"; sourceTree = "<group>"; };
 		D5CFE31A1B640B4300E1683C /* AppDelegate+WCSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+WCSessionDelegate.h"; sourceTree = "<group>"; };
-		D5D092BC1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RootInterfaceController+CLLocationManagerDelegate.h"; sourceTree = "<group>"; };
-		D5D092BD1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RootInterfaceController+CLLocationManagerDelegate.m"; sourceTree = "<group>"; };
+		D5D092BC1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RootInterfaceController+CLLocationManagerDelegate.h"; path = "Therewego Watch App/Therewego Watch App Extension/Controllers/Root/RootInterfaceController+CLLocationManagerDelegate.h"; sourceTree = SOURCE_ROOT; };
+		D5D092BD1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RootInterfaceController+CLLocationManagerDelegate.m"; path = "Therewego Watch App/Therewego Watch App Extension/Controllers/Root/RootInterfaceController+CLLocationManagerDelegate.m"; sourceTree = SOURCE_ROOT; };
 		D5D092C01B657D6A008062CF /* TWGPlaceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWGPlaceCollection.h; sourceTree = "<group>"; };
 		D5D092C11B657D6A008062CF /* TWGPlaceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWGPlaceCollection.m; sourceTree = "<group>"; };
 		F5B4A70C61BADC53661FD9DB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -379,6 +388,47 @@
 			path = "Therewego Watch App/TherewegoKit Framework";
 			sourceTree = "<group>";
 		};
+		D5AA8C001B65928D0074436B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				D5A75F471B600BF900C444DF /* RootInterfaceController.h */,
+				D5A75F481B600BF900C444DF /* RootInterfaceController.m */,
+				D5D092BC1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.h */,
+				D5D092BD1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		D5AA8C011B6592EB0074436B /* PlacesList */ = {
+			isa = PBXGroup;
+			children = (
+				D5AA8C091B6595DD0074436B /* PlaceRow */,
+				D5AA8C031B6593B50074436B /* PlacesListInterfaceController.h */,
+				D5AA8C041B6593B50074436B /* PlacesListInterfaceController.m */,
+			);
+			name = PlacesList;
+			path = Places;
+			sourceTree = "<group>";
+		};
+		D5AA8C021B6593130074436B /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				D5AA8C061B6595110074436B /* PlaceInterfaceController.h */,
+				D5AA8C071B6595110074436B /* PlaceInterfaceController.m */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		D5AA8C091B6595DD0074436B /* PlaceRow */ = {
+			isa = PBXGroup;
+			children = (
+				D5AA8C0A1B6596550074436B /* PlaceRowController.h */,
+				D5AA8C0B1B6596550074436B /* PlaceRowController.m */,
+			);
+			name = PlaceRow;
+			path = "Therewego Watch App/Therewego Watch App Extension/Controllers/Place/PlaceRow";
+			sourceTree = SOURCE_ROOT;
+		};
 		D5CFE3061B63CB7E00E1683C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,10 +445,9 @@
 		D5CFE31B1B64CEC500E1683C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D5A75F471B600BF900C444DF /* RootInterfaceController.h */,
-				D5A75F481B600BF900C444DF /* RootInterfaceController.m */,
-				D5D092BC1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.h */,
-				D5D092BD1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m */,
+				D5AA8C001B65928D0074436B /* Root */,
+				D5AA8C011B6592EB0074436B /* PlacesList */,
+				D5AA8C021B6593130074436B /* Place */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -710,11 +759,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5AA8C0C1B6596550074436B /* PlaceRowController.m in Sources */,
 				D5A75F4C1B600BF900C444DF /* ExtensionDelegate.m in Sources */,
+				D5AA8C051B6593B50074436B /* PlacesListInterfaceController.m in Sources */,
 				D5CFE3171B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.m in Sources */,
 				D5A75F491B600BF900C444DF /* RootInterfaceController.m in Sources */,
 				D5A75F4F1B600BF900C444DF /* NotificationController.m in Sources */,
 				D5D092BE1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m in Sources */,
+				D5AA8C081B6595110074436B /* PlaceInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
