@@ -9,7 +9,15 @@
 #import "PlaceInterfaceController.h"
 
 
-@interface PlaceInterfaceController()
+@interface PlaceInterfaceController(PrivateMethods)
+
+
+/**
+    Configures content for a place;
+ 
+    @param place A place to configure.
+*/
+-(void)configureContentFor:(TWGPlace *)place;
 
 @end
 
@@ -18,6 +26,8 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
+    
+    [self configureContentFor:(TWGPlace *)context];
 }
 
 - (void)willActivate {
@@ -26,6 +36,20 @@
 
 - (void)didDeactivate {
     [super didDeactivate];
+}
+
+- (void)configureContentFor:(TWGPlace *)place {
+    [[self name] setText:place.name];
+    
+    if (place.vicinity) {
+        [[self vicinity] setText:place.vicinity];
+    }
+    
+    if (place.photoReference) {
+        [[TWGDataProvider new] getPhotoByReference:place.photoReference onCompletion:^void(UIImage *image) {
+            [[self placePhoto] setImage:image];
+        }];
+    }
 }
 
 @end

@@ -38,7 +38,9 @@
 }
 
 -(void)table:(nonnull WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex {
-
+    TWGPlace *place = [[TWGPlaceCollection sharedInstance] getPlaceBy:rowIndex];
+    
+    [self pushControllerWithName:@"PlaceInterfaceController" context:place];
 }
 
 -(void)configureTable {

@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <WatchKit/WatchKit.h>
-#import "TWGPlaceCollection.h"
+#import "TWGPlace.h"
+#import "TWGDataProvider.h"
 
 @interface PlaceInterfaceController : WKInterfaceController
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *name;
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *vicinity;
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage *placePhoto;
+
 
 @end

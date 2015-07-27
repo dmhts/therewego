@@ -57,6 +57,36 @@
             </objects>
             <point key="canvasLocation" x="468" y="326"/>
         </scene>
+        <!--PlaceInterfaceController-->
+        <scene sceneID="M3I-rK-Xqs">
+            <objects>
+                <controller identifier="PlaceInterfaceController" hidesWhenLoading="NO" id="vtN-o7-Zrd" customClass="PlaceInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" id="Lra-k9-TGS">
+                            <items>
+                                <label width="1" height="20" alignment="left" text="Name" numberOfLines="3" id="QS9-Pd-7rt"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="nlf-QO-U9j">
+                            <items>
+                                <label width="1" height="20" alignment="left" text="Vicinity" id="hRP-Zd-T1h"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="SHi-Qu-WxO">
+                            <items>
+                                <imageView alignment="left" id="0ps-5P-mPI"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="name" destination="QS9-Pd-7rt" id="z5M-i5-cwr"/>
+                        <outlet property="placePhoto" destination="0ps-5P-mPI" id="GpZ-LX-zud"/>
+                        <outlet property="vicinity" destination="hRP-Zd-T1h" id="Skm-NZ-Q63"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="721" y="326"/>
+        </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
