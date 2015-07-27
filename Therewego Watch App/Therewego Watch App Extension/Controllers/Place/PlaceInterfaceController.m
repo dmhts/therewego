@@ -46,7 +46,10 @@
     }
     
     if (place.photoReference) {
+        [[self spinner] setHidden:FALSE];
+        
         [[TWGDataProvider new] getPhotoByReference:place.photoReference onCompletion:^void(UIImage *image) {
+            [[self spinner] setHidden:TRUE];
             [[self placePhoto] setImage:image];
         }];
     }

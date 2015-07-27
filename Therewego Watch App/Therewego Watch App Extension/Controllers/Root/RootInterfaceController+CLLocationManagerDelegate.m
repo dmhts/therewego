@@ -30,6 +30,10 @@
     
     [dataProvider getNearbyPlacesByCoordinates:&currentLocation inRadius:5000 withTypes:types onCompletion:^void(NSArray *places) {
         
+        [self.spinner setHidden:TRUE];
+        [self.detailsButton setHidden:FALSE];
+        [self.map setHidden:FALSE];
+        
         for (int index = 0; index < 5; index++) {
             TWGPlace *place = [[TWGPlaceCollection sharedInstance] getPlaceBy:index];
             

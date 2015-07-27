@@ -41,6 +41,7 @@
     // Make just a single location request.
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
         [self.locationManager requestLocation];
+        [self.spinner setHidden:FALSE];
     }
 }
 

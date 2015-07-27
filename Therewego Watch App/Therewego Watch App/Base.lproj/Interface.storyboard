@@ -10,25 +10,35 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="RootInterfaceController">
                     <items>
-                        <button width="1" alignment="left" title="Get GPS" id="7tL-kO-gN0">
+                        <group width="1" height="90" alignment="left" hidden="YES" id="KRH-xW-hdZ">
+                            <items>
+                                <label width="1" height="85" alignment="left" text="Cool spinner :)" textAlignment="center" id="aVo-Ya-CT6"/>
+                            </items>
+                        </group>
+                        <map height="161" alignment="left" hidden="YES" id="CUp-hJ-O0a"/>
+                        <button width="1" alignment="left" title="Show 5 Nearest Transport Stations" id="7tL-kO-gN0">
+                            <color key="backgroundColor" red="0.40784313725490196" green="0.69803921568627447" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="13"/>
                             <connections>
                                 <action selector="didTapButton" destination="AgC-eL-Hgc" id="G66-Jp-J4y"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Details" id="nS5-zF-Ci2">
+                        <button width="1" alignment="left" hidden="YES" title="Details" id="nS5-zF-Ci2">
+                            <color key="backgroundColor" red="0.56470588235294117" green="0.81176470588235294" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="2oR-rD-9Ki" kind="push" id="pRv-QL-guL"/>
                             </connections>
                         </button>
-                        <map height="155" alignment="left" id="CUp-hJ-O0a"/>
                     </items>
                     <connections>
+                        <outlet property="detailsButton" destination="nS5-zF-Ci2" id="HuI-af-P9s"/>
                         <outlet property="gpsButton" destination="7tL-kO-gN0" id="xUl-bi-m33"/>
                         <outlet property="map" destination="CUp-hJ-O0a" id="4QD-zb-fKM"/>
+                        <outlet property="spinner" destination="KRH-xW-hdZ" id="JMv-a9-jcd"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="364"/>
+            <point key="canvasLocation" x="220" y="383"/>
         </scene>
         <!--Places List Interface Controller-->
         <scene sceneID="HEO-JY-7Oy">
@@ -55,7 +65,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="326"/>
+            <point key="canvasLocation" x="468" y="383"/>
         </scene>
         <!--PlaceInterfaceController-->
         <scene sceneID="M3I-rK-Xqs">
@@ -72,6 +82,11 @@
                                 <label width="1" height="20" alignment="left" text="Vicinity" id="hRP-Zd-T1h"/>
                             </items>
                         </group>
+                        <group width="1" alignment="left" id="qjZ-o3-hxM">
+                            <items>
+                                <label width="1" height="90" alignment="left" hidden="YES" text="Cool spinner :)" textAlignment="center" id="47M-EO-G4J"/>
+                            </items>
+                        </group>
                         <group width="1" alignment="left" id="SHi-Qu-WxO">
                             <items>
                                 <imageView alignment="left" id="0ps-5P-mPI"/>
@@ -81,11 +96,12 @@
                     <connections>
                         <outlet property="name" destination="QS9-Pd-7rt" id="z5M-i5-cwr"/>
                         <outlet property="placePhoto" destination="0ps-5P-mPI" id="GpZ-LX-zud"/>
+                        <outlet property="spinner" destination="47M-EO-G4J" id="UlZ-b7-Ems"/>
                         <outlet property="vicinity" destination="hRP-Zd-T1h" id="Skm-NZ-Q63"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="721" y="326"/>
+            <point key="canvasLocation" x="719" y="383"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

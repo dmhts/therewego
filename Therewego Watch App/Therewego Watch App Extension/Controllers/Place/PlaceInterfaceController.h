@@ -19,5 +19,6 @@
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage *placePhoto;
 
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *spinner;
 
 @end

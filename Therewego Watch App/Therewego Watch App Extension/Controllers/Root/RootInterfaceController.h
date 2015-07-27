@@ -13,9 +13,13 @@
 
 @interface RootInterfaceController : WKInterfaceController <CLLocationManagerDelegate>
 
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *gpsButton;
 
-@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *detailsButton;
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceGroup *spinner;
 
 - (IBAction)didTapButton;
 
