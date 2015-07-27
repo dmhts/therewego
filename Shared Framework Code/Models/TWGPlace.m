@@ -36,6 +36,7 @@
             self.place_id = place_id;
             self.name = name;
             self.types = types;
+            self.vicinity = [placeDictionary objectForKey:@"vicinity"];
             
             // TODO: Move coordinate deriving to a separate method.
             double latitude = [self deriveCoordinateFrom:placeDictionary coordinate:@"lat"];

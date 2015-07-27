@@ -32,6 +32,9 @@
 /// The property is only returned for a Text Search.
 @property (nullable) NSString* address;
 
+/// Contains a feature name of a nearby location
+@property (nullable) NSString* vicinity;
+
 // TODO: It is possible to store multiple photo references.
 /// The string used to identify the photo when you perform a Photo request.
 @property (nullable) NSString* photoReference;
