@@ -26,8 +26,11 @@
     /// The shared session object.
     NSURLSession *session;
     
-    /// The ongoing NSUrl task.
+    /// The ongoing place fetching task.
     NSURLSessionDataTask *nearbyPlacesTask;
+    
+    /// The ongoing photo fetching task.
+    NSURLSessionDataTask *photoFetchingTask;
     
 }
 
@@ -109,6 +112,35 @@
     }
 
     return resultingTypeString;
+}
+
+-(void)getPhotoByReference:(NSString *)reference onCompletion:(void (^)(UIImage *))completion {
+    
+    // Compose a request string.
+    NSString *requestString = [NSString stringWithFormat:@"%@?key=%@&maxwidth=%d&photoreference=%@",
+                               TWGFetchPhotoByReferenceUrl,
+                               TWGBrowserApiKey,
+                               200,
+                               reference];
+    
+    // Encode a request string and convert it to the url object.
+    NSURL *requestUrl = [NSURL URLWithString:[requestString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
+    
+    // Cancel a current task if one is taking place.
+    if (photoFetchingTask.taskIdentifier > 0 && photoFetchingTask.state == NSURLSessionTaskStateRunning) {
+        [photoFetchingTask cancel];
+    }
+    
+    photoFetchingTask = [session dataTaskWithURL:requestUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        UIImage *photo = [[UIImage alloc] initWithData: data];
+        
+        // Return photo to the main queue 'case we work with UI.
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            completion(photo);
+        });
+    }];
+    
+    [photoFetchingTask resume];
 }
 
 @end

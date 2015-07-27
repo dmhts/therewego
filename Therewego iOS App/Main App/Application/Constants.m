@@ -11,3 +11,4 @@
 NSString *const TWGiOSApiKey = @"AIzaSyA75bEdriappo-mQ0MrFfWriW1um8UmzTE";
 NSString *const TWGBrowserApiKey = @"AIzaSyDHo0ZBfs4DiFZzLA3g06xdM67juQYSeQE";
 NSString *const TWGNearbyPlacesSearchUrl = @"https://maps.googleapis.com/maps/api/place/nearbysearch/";
+NSString *const TWGFetchPhotoByReferenceUrl = @"https://maps.googleapis.com/maps/api/place/photo";

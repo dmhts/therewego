@@ -16,3 +16,6 @@ extern NSString *const TWGBrowserApiKey;
 
 /// A Nearby Places Search request URL.
 extern NSString *const TWGNearbyPlacesSearchUrl;
+
+/// The URL for fetching Google Place Photo by its reference.
+extern NSString *const TWGFetchPhotoByReferenceUrl;
