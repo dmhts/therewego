@@ -20,7 +20,8 @@
     // Since we use only single requests to fetch a current location then it will be sufficient.
     CLLocationCoordinate2D currentLocation = [locations objectAtIndex:0].coordinate;
     
-    currentLocation = CLLocationCoordinate2DMake(46.4667, 30.7333);
+    // Odessa Mama
+    //currentLocation = CLLocationCoordinate2DMake(46.4667, 30.7333);
     
     // TODO: Maybe it makes sense to turn the provider into the singleton.
     TWGDataProvider *dataProvider = [TWGDataProvider new];
@@ -54,6 +55,13 @@
         [self.map setRegion:(MKCoordinateRegionMake(currentLocation, coordinateSpan))];
     }];
     
+}
+
+-(void)locationManager:(nonnull CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        [self.locationManager requestLocation];
+        [self.spinner setHidden:FALSE];
+    }
 }
 
 -(void)locationManager:(nonnull CLLocationManager *)manager didFailWithError:(nonnull NSError *)error {
