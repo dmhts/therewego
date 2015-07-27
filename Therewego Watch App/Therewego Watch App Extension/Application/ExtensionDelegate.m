@@ -14,12 +14,6 @@
     // Session objects are always available on Apple Watch thus there is no use in calling +WCSession.isSupported method.
     [WCSession defaultSession].delegate = self;
     [[WCSession defaultSession] activateSession];
-    
-    // Set up a location manager.
-    CLLocationManager *locationManager = [CLLocationManager new];
-    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
-        [locationManager requestAlwaysAuthorization];
-    }
 }
 
 - (void)applicationDidBecomeActive {
