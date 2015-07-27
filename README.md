@@ -4,7 +4,7 @@ The WatchApp shows the nearest public transport stations but it is easy to chang
 
 ## Requirements
 
-- iOS 9.0+
+- iOS 9.0+ / WatchOS 2
 - Xcode 7.0 beta4
 
 <img src="https://github.com/dmgts/therewego/blob/master/ThereWeGo.gif" title=“ThereWeGo WatchApp”>
