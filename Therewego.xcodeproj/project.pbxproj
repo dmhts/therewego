@@ -923,7 +923,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Therewego iOS App/Main App/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.therewego;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moovel.test.therewego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -935,7 +935,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Therewego iOS App/Main App/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.therewego;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moovel.test.therewego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -951,7 +951,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Therewego iOS App/TherewegoKit Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.TherewegoKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moovel.test.TherewegoKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -970,7 +970,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Therewego iOS App/TherewegoKit Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.TherewegoKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moovel.test.TherewegoKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -983,7 +983,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "$(SRCROOT)/Therewego Watch App/Therewego Watch App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.therewego.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moovel.test.therewego.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -997,7 +997,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "$(SRCROOT)/Therewego Watch App/Therewego Watch App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.therewego.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moovel.test.therewego.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1012,7 +1012,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IBSC_MODULE = watchapp_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/Therewego Watch App/Therewego Watch App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.therewego.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moovel.test.therewego.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1027,7 +1027,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IBSC_MODULE = watchapp_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/Therewego Watch App/Therewego Watch App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.therewego.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moovel.test.therewego.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1048,7 +1048,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Therewego Watch App/TherewegoKit Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.TherewegoKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moovel.test.TherewegoKit;
 				PRODUCT_NAME = TherewegoKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1071,7 +1071,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Therewego Watch App/TherewegoKit Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = shape.ag.TherewegoKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moovel.test.TherewegoKit;
 				PRODUCT_NAME = TherewegoKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

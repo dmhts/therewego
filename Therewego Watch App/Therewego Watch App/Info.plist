@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>shape.ag.therewego</string>
+	<string>com.moovel.test.therewego</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
