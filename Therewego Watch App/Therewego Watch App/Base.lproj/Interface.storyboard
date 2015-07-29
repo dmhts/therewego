@@ -10,19 +10,18 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="RootInterfaceController">
                     <items>
-                        <group width="1" height="90" alignment="left" hidden="YES" id="KRH-xW-hdZ">
-                            <items>
-                                <label width="1" height="85" alignment="left" text="Cool spinner :)" textAlignment="center" id="aVo-Ya-CT6"/>
-                            </items>
-                        </group>
                         <map height="161" alignment="left" hidden="YES" id="CUp-hJ-O0a"/>
-                        <button width="1" alignment="left" title="Show 5 Nearest Transport Stations" id="7tL-kO-gN0">
+                        <button width="1" alignment="left" title="Show nearest transport stations" id="7tL-kO-gN0">
                             <color key="backgroundColor" red="0.40784313725490196" green="0.69803921568627447" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" type="system" pointSize="13"/>
+                            <fontDescription key="font" type="system" pointSize="11"/>
                             <connections>
                                 <action selector="didTapButton" destination="AgC-eL-Hgc" id="G66-Jp-J4y"/>
                             </connections>
                         </button>
+                        <label width="1" alignment="left" hidden="YES" text="ErrorLabel" textAlignment="center" numberOfLines="3" minimumScaleFactor="0.69999999999999996" id="xUv-li-JSY">
+                            <color key="textColor" red="1" green="0.0" blue="0.03014565537" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
                         <button width="1" alignment="left" hidden="YES" title="Details" id="nS5-zF-Ci2">
                             <color key="backgroundColor" red="0.56470588235294117" green="0.81176470588235294" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -32,13 +31,13 @@
                     </items>
                     <connections>
                         <outlet property="detailsButton" destination="nS5-zF-Ci2" id="HuI-af-P9s"/>
+                        <outlet property="errorLabel" destination="xUv-li-JSY" id="CxW-1B-PU9"/>
                         <outlet property="gpsButton" destination="7tL-kO-gN0" id="xUl-bi-m33"/>
                         <outlet property="map" destination="CUp-hJ-O0a" id="4QD-zb-fKM"/>
-                        <outlet property="spinner" destination="KRH-xW-hdZ" id="JMv-a9-jcd"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="383"/>
+            <point key="canvasLocation" x="220" y="381"/>
         </scene>
         <!--Places List Interface Controller-->
         <scene sceneID="HEO-JY-7Oy">

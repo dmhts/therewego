@@ -15,14 +15,28 @@
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
+@property BOOL isRequestingLocation;
+
+@property NSString* requestLocationTitle;
+
+@property NSString* fetchingPlacesTitle;
+
+@property NSString* deniedText;
+
+@property NSString* unexpectedText;
+
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *gpsButton;
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *detailsButton;
 
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceGroup *spinner;
-
-- (IBAction)didTapButton;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *errorLabel;
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceMap *map;
+
+- (void)hideErrorAfter:(double)seconds;
+
+- (void)showErrorWith:(NSString *)text;
+
+- (IBAction)didTapButton;
 
 @end

@@ -16,6 +16,10 @@
 @implementation RootInterfaceController (CLLocationManagerDelegate)
 
 -(void)locationManager:(nonnull CLLocationManager *)manager didUpdateLocations:(nonnull NSArray<CLLocation *> *)locations {
+    self.isRequestingLocation = FALSE;
+    [self.gpsButton setTitle:self.requestLocationTitle];
+    [self.gpsButton setTitle:self.fetchingPlacesTitle];
+    
     // Locations array always contains at least one object representing the current location.
     // Since we use only single requests to fetch a current location then it will be sufficient.
     CLLocationCoordinate2D currentLocation = [locations objectAtIndex:0].coordinate;
@@ -30,8 +34,7 @@
     NSArray *types = @[@"airport", @"train_station", @"bus_station", @"subway_station"];
     
     [dataProvider getNearbyPlacesByCoordinates:&currentLocation inRadius:5000 withTypes:types onCompletion:^void(NSArray *places) {
-        
-        [self.spinner setHidden:TRUE];
+        [self.gpsButton setTitle:self.requestLocationTitle];
         [self.detailsButton setHidden:FALSE];
         [self.map setHidden:FALSE];
         
@@ -58,14 +61,27 @@
 }
 
 -(void)locationManager:(nonnull CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
-        [self.locationManager requestLocation];
-        [self.spinner setHidden:FALSE];
+    if (!self.isRequestingLocation) {
+        return;
+    }
+    
+    switch (status) {
+        case kCLAuthorizationStatusDenied:
+            [self showErrorWith:self.deniedText];
+            [self.gpsButton setTitle:self.requestLocationTitle];
+            break;
+        default:
+            [self showErrorWith:self.unexpectedText];
+            [self.gpsButton setTitle:self.requestLocationTitle];
     }
 }
 
 -(void)locationManager:(nonnull CLLocationManager *)manager didFailWithError:(nonnull NSError *)error {
-    // TODO: Handle or not to handle errors.
+    //dispatch_sync(dispatch_get_main_queue(), ^{
+    [self showErrorWith:error.localizedDescription];
+    self.isRequestingLocation = FALSE;
+    [self.gpsButton setTitle:self.requestLocationTitle];
+    //});
 }
 
 @end
