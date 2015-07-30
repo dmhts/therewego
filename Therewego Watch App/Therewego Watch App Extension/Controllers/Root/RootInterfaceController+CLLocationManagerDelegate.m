@@ -16,8 +16,11 @@
 @implementation RootInterfaceController (CLLocationManagerDelegate)
 
 -(void)locationManager:(nonnull CLLocationManager *)manager didUpdateLocations:(nonnull NSArray<CLLocation *> *)locations {
+    if ([locations count] == 0) {
+        return;
+    }
+    
     self.isRequestingLocation = FALSE;
-    [self.gpsButton setTitle:self.requestLocationTitle];
     [self.gpsButton setTitle:self.fetchingPlacesTitle];
     
     // Locations array always contains at least one object representing the current location.
@@ -34,28 +37,31 @@
     NSArray *types = @[@"airport", @"train_station", @"bus_station", @"subway_station"];
     
     [dataProvider getNearbyPlacesByCoordinates:&currentLocation inRadius:5000 withTypes:types onCompletion:^void(NSArray *places) {
-        [self.gpsButton setTitle:self.requestLocationTitle];
-        [self.detailsButton setHidden:FALSE];
-        [self.map setHidden:FALSE];
-        
-        for (int index = 0; index < 5; index++) {
-            TWGPlace *place = [[TWGPlaceCollection sharedInstance] getPlaceBy:index];
+        // Work with the UI only within the main thread.
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.gpsButton setTitle:self.requestLocationTitle];
+            [self.detailsButton setHidden:FALSE];
+            [self.map setHidden:FALSE];
             
-            if (!place) {
-                break;
+            for (int index = 0; index < 5; index++) {
+                TWGPlace *place = [[TWGPlaceCollection sharedInstance] getPlaceBy:index];
+                
+                if (!place) {
+                    break;
+                }
+                
+                CLLocationDegrees latitude = ((NSNumber *)[place.location objectForKey:@"latitude"]).doubleValue;
+                CLLocationDegrees longitude = ((NSNumber *)[place.location objectForKey:@"longitude"]).doubleValue;
+                
+                // Put a pin to the map.
+                [self.map addAnnotation:CLLocationCoordinate2DMake(latitude, longitude) withPinColor: WKInterfaceMapPinColorPurple];
             }
             
-            CLLocationDegrees latitude = ((NSNumber *)[place.location objectForKey:@"latitude"]).doubleValue;
-            CLLocationDegrees longitude = ((NSNumber *)[place.location objectForKey:@"longitude"]).doubleValue;
+            // The amount of map to display.
+            MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.1, 0.1);
             
-            // Put a pin to the map.
-            [self.map addAnnotation:CLLocationCoordinate2DMake(latitude, longitude) withPinColor: WKInterfaceMapPinColorPurple];
-        }
-        
-        // The amount of map to display.
-        MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.1, 0.1);
-        
-        [self.map setRegion:(MKCoordinateRegionMake(currentLocation, coordinateSpan))];
+            [self.map setRegion:(MKCoordinateRegionMake(currentLocation, coordinateSpan))];
+        });
     }];
     
 }
@@ -65,23 +71,27 @@
         return;
     }
     
-    switch (status) {
-        case kCLAuthorizationStatusDenied:
-            [self showErrorWith:self.deniedText];
-            [self.gpsButton setTitle:self.requestLocationTitle];
-            break;
-        default:
-            [self showErrorWith:self.unexpectedText];
-            [self.gpsButton setTitle:self.requestLocationTitle];
-    }
+    // Work with the UI only within the main thread.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        switch (status) {
+            case kCLAuthorizationStatusDenied:
+                [self showErrorWith:self.deniedText];
+                [self.gpsButton setTitle:self.requestLocationTitle];
+                break;
+            default:
+                [self showErrorWith:self.unexpectedText];
+                [self.gpsButton setTitle:self.requestLocationTitle];
+        }
+    });
 }
 
 -(void)locationManager:(nonnull CLLocationManager *)manager didFailWithError:(nonnull NSError *)error {
-    //dispatch_sync(dispatch_get_main_queue(), ^{
-    [self showErrorWith:error.localizedDescription];
-    self.isRequestingLocation = FALSE;
-    [self.gpsButton setTitle:self.requestLocationTitle];
-    //});
+    // Work with the UI only within the main thread.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self showErrorWith:error.localizedDescription];
+        self.isRequestingLocation = FALSE;
+        [self.gpsButton setTitle:self.requestLocationTitle];
+    });
 }
 
 @end

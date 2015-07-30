@@ -8,7 +8,10 @@
 
 #import "TWGPlaceCollection.h"
 
-@interface TWGPlaceCollection (PrivateMethods)
+@interface TWGPlaceCollection ()
+
+/// Stores an array of places.
+@property (nonnull, strong) NSMutableArray *places;
 
 @end
 
@@ -27,22 +30,20 @@
 - (instancetype)init {
     if ( self = [super init] ) {
         self.places = [NSMutableArray array];
-        
-        return self;
-    } else {
-        return nil;
     }
+    
+    return self;
 }
 
--(void)clearPlaces {
+- (void)clearPlaces {
     [self.places removeAllObjects];
 }
 
--(void)addPlace:(TWGPlace *)place {
+- (void)addPlace:(TWGPlace *)place {
     [self.places addObject:place];
 }
 
--(nullable TWGPlace *)getPlaceBy:(int)index {
+- (nullable TWGPlace *)getPlaceBy:(int)index {
     if (index < [self.places count]) {
         return [self.places objectAtIndex:index];
     } else {
@@ -51,10 +52,12 @@
     
 }
 
--(instancetype)addPlaces:(NSArray *)places {
+- (void)addPlaces:(NSArray *)places {
     [self.places addObjectsFromArray:places];
-    
-    return self;
+}
+
+- (nonnull NSArray *)getPlaces {
+    return self.places;
 }
 
 @end

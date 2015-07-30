@@ -17,16 +17,15 @@
     @param geometryData A dictionary with geometry data.
     @param coordinate Takes either "lat" or "lng" value.
  */
--(double)deriveCoordinateFrom:(NSDictionary *)placeDictionary coordinate:(NSString *)coordinate;
+- (double)deriveCoordinateFrom:(NSDictionary *)placeDictionary coordinate:(NSString *)coordinate;
 @end
 
 @implementation TWGPlace
 
--(nullable instancetype)initWithDictionary:(nonnull NSDictionary *)placeDictionary {
+- (nullable instancetype)initWithDictionary:(nonnull NSDictionary *)placeDictionary {
     self = [super init];
     
     if (self) {
-        
         NSString *place_id = [placeDictionary objectForKey:@"place_id"];
         NSString *name = [placeDictionary objectForKey:@"name"];
         NSArray *types = [placeDictionary objectForKey:@"types"];
@@ -50,17 +49,13 @@
                 NSDictionary *firstPhoto = [photos objectAtIndex:0];
                 self.photoReference = [firstPhoto objectForKey:@"photo_reference"];
             }
-            
-            return self;
-        } else {
-            return nil;
         }
-    } else {
-        return nil;
     }
+    
+    return self;
 }
 
--(double)deriveCoordinateFrom:(NSDictionary *)placeDictionary coordinate:(NSString *)coordinate {
+- (double)deriveCoordinateFrom:(NSDictionary *)placeDictionary coordinate:(NSString *)coordinate {
     NSDictionary *geometry = [placeDictionary objectForKey:@"geometry"];
     
     if (geometry) {

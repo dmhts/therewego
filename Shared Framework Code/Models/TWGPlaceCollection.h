@@ -15,38 +15,42 @@
  */
 @interface TWGPlaceCollection : NSObject
 
-/// Stores an array of places.
-@property (nonnull, strong) NSMutableArray *places;
-
 /** 
     The canonical way of declaring a Singleton.
  
     @return The current class instance.
 */
-+(nonnull TWGPlaceCollection *)sharedInstance;
++ (nonnull TWGPlaceCollection *)sharedInstance;
 
 /**
     Clears the places collection.
 */
--(void)clearPlaces;
+- (void)clearPlaces;
 
 /**
     Adds a place object to the collection.
 */
--(void)addPlace:(nonnull TWGPlace *)place;
+- (void)addPlace:(nonnull TWGPlace *)place;
 
 /**
     Returns a place by its index.
  
     @return A place by its index.
 */
--(nullable TWGPlace *)getPlaceBy:(int)index;
+- (nullable TWGPlace *)getPlaceBy:(int)index;
 
 /**
     Adds places objects to the collectins.
  
     @return The current class instance.
 */
--(nonnull instancetype)addPlaces:(nonnull NSArray *)places;
+- (void)addPlaces:(nonnull NSArray *)places;
+
+/**
+    Gets all places objects.
+ 
+    @return The array of stored places.
+*/
+- (nonnull NSArray *)getPlaces;
 
 @end

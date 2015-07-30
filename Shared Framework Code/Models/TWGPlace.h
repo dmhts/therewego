@@ -48,6 +48,6 @@
     
     @param placeDictionary A Google Place model dictionary.
 */
--(nullable instancetype)initWithDictionary:(nonnull NSDictionary *)placeDictionary;
+- (nullable instancetype)initWithDictionary:(nonnull NSDictionary *)placeDictionary;
 
 @end

@@ -86,7 +86,7 @@
                     [[TWGPlaceCollection sharedInstance] addPlace:place];
                 }
                 
-                completion([TWGPlaceCollection sharedInstance].places);
+                completion([[TWGPlaceCollection sharedInstance] getPlaces]);
             } else {
                 // TODO: Process an absent key error.
             }
@@ -99,7 +99,7 @@
     [nearbyPlacesTask resume];
 }
 
--(NSString *)typesToString:(NSArray *)types {
+- (NSString *)typesToString:(NSArray *)types {
     NSMutableString* resultingTypeString = [NSMutableString stringWithString:@""];
     
     for (NSString* type in types) {
@@ -114,7 +114,7 @@
     return resultingTypeString;
 }
 
--(void)getPhotoByReference:(NSString *)reference onCompletion:(void (^)(UIImage *))completion {
+- (void)getPhotoByReference:(NSString *)reference onCompletion:(void (^)(UIImage *))completion {
     
     // Compose a request string.
     NSString *requestString = [NSString stringWithFormat:@"%@?key=%@&maxwidth=%d&photoreference=%@",
