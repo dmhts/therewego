@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		372590121528F2DC690B8FA8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFED5589C5DB872DE7F7409 /* libPods.a */; };
+		D5428D221B81CFF600061C5E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D59411931B62AF4400E3D6D2 /* Constants.m */; };
+		D5428D231B81D00500061C5E /* TWGPlaceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D092C11B657D6A008062CF /* TWGPlaceCollection.m */; };
+		D5428D241B81D01000061C5E /* TWGPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = D59411901B61729E00E3D6D2 /* TWGPlace.m */; };
+		D5428D251B81D01900061C5E /* TWGDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D594118D1B616B3100E3D6D2 /* TWGDataProvider.m */; };
+		D5428D261B81D0AD00061C5E /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = D59411921B62AED500E3D6D2 /* Constants.h */; };
+		D5428D271B81D0B300061C5E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D59411931B62AF4400E3D6D2 /* Constants.m */; };
 		D561853F1B5EDEBA004ABB9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D56185341B5EDEBA004ABB9B /* AppDelegate.m */; };
 		D56185401B5EDEBA004ABB9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56185351B5EDEBA004ABB9B /* Assets.xcassets */; };
 		D56185411B5EDEBA004ABB9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56185361B5EDEBA004ABB9B /* LaunchScreen.storyboard */; };
@@ -30,27 +36,9 @@
 		D5AA8C051B6593B50074436B /* PlacesListInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AA8C041B6593B50074436B /* PlacesListInterfaceController.m */; };
 		D5AA8C081B6595110074436B /* PlaceInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AA8C071B6595110074436B /* PlaceInterfaceController.m */; };
 		D5AA8C0C1B6596550074436B /* PlaceRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AA8C0B1B6596550074436B /* PlaceRowController.m */; };
-		D5CFE3071B63CC0900E1683C /* TWGPlace.h in Headers */ = {isa = PBXBuildFile; fileRef = D594118F1B61729E00E3D6D2 /* TWGPlace.h */; };
-		D5CFE3081B63CC0B00E1683C /* TWGPlace.h in Headers */ = {isa = PBXBuildFile; fileRef = D594118F1B61729E00E3D6D2 /* TWGPlace.h */; };
-		D5CFE3091B63CC1100E1683C /* TWGPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = D59411901B61729E00E3D6D2 /* TWGPlace.m */; };
-		D5CFE30A1B63CC1200E1683C /* TWGPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = D59411901B61729E00E3D6D2 /* TWGPlace.m */; };
 		D5CFE3171B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CFE3161B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.m */; };
 		D5CFE3191B640AC300E1683C /* AppDelegate+WCSessionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CFE3181B640AC300E1683C /* AppDelegate+WCSessionDelegate.m */; };
-		D5D092AB1B6537E6008062CF /* TWGDataProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = D594118C1B61693C00E3D6D2 /* TWGDataProvider.h */; };
-		D5D092AC1B6537E7008062CF /* TWGDataProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = D594118C1B61693C00E3D6D2 /* TWGDataProvider.h */; };
-		D5D092AD1B6537EB008062CF /* TWGDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D594118D1B616B3100E3D6D2 /* TWGDataProvider.m */; };
-		D5D092AE1B6537EC008062CF /* TWGDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D594118D1B616B3100E3D6D2 /* TWGDataProvider.m */; };
-		D5D092AF1B65381E008062CF /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = D59411921B62AED500E3D6D2 /* Constants.h */; };
-		D5D092B01B65381F008062CF /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = D59411921B62AED500E3D6D2 /* Constants.h */; };
-		D5D092B11B653823008062CF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D59411931B62AF4400E3D6D2 /* Constants.m */; };
-		D5D092B21B653825008062CF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D59411931B62AF4400E3D6D2 /* Constants.m */; };
-		D5D092B31B653C37008062CF /* TherewegoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A75F641B600FD800C444DF /* TherewegoKit.framework */; };
-		D5D092B41B653C37008062CF /* TherewegoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5A75F641B600FD800C444DF /* TherewegoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5D092BE1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D092BD1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m */; };
-		D5D092C21B657D6A008062CF /* TWGPlaceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D092C01B657D6A008062CF /* TWGPlaceCollection.h */; };
-		D5D092C31B657D6A008062CF /* TWGPlaceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D092C01B657D6A008062CF /* TWGPlaceCollection.h */; };
-		D5D092C41B657D6A008062CF /* TWGPlaceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D092C11B657D6A008062CF /* TWGPlaceCollection.m */; };
-		D5D092C51B657D6A008062CF /* TWGPlaceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D092C11B657D6A008062CF /* TWGPlaceCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,13 +62,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = D5A75F331B600BF900C444DF;
 			remoteInfo = watchapp;
-		};
-		D5D092B51B653C37008062CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D56184AA1B5ED1DC004ABB9B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D5A75F631B600FD800C444DF;
-			remoteInfo = "TherewegoKit (WatchOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -116,17 +97,6 @@
 				D5A75F411B600BF900C444DF /* Therewego Watch App Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5D092B71B653C37008062CF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D5D092B41B653C37008062CF /* TherewegoKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -209,7 +179,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D092B31B653C37008062CF /* TherewegoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,11 +457,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D092AB1B6537E6008062CF /* TWGDataProvider.h in Headers */,
+				D5428D261B81D0AD00061C5E /* Constants.h in Headers */,
 				D56185661B5FFFCD004ABB9B /* TherewegoKit.h in Headers */,
-				D5D092AF1B65381E008062CF /* Constants.h in Headers */,
-				D5D092C21B657D6A008062CF /* TWGPlaceCollection.h in Headers */,
-				D5CFE3071B63CC0900E1683C /* TWGPlace.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,11 +466,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D092AC1B6537E7008062CF /* TWGDataProvider.h in Headers */,
 				D5A75F671B600FD800C444DF /* TherewegoKit.h in Headers */,
-				D5D092B01B65381F008062CF /* Constants.h in Headers */,
-				D5D092C31B657D6A008062CF /* TWGPlaceCollection.h in Headers */,
-				D5CFE3081B63CC0B00E1683C /* TWGPlace.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,12 +538,10 @@
 				D5A75F3C1B600BF900C444DF /* Sources */,
 				D5A75F3D1B600BF900C444DF /* Frameworks */,
 				D5A75F3E1B600BF900C444DF /* Resources */,
-				D5D092B71B653C37008062CF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D5D092B61B653C37008062CF /* PBXTargetDependency */,
 			);
 			name = "Therewego Watch App Extension";
 			productName = "watchapp Extension";
@@ -748,10 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5CFE3091B63CC1100E1683C /* TWGPlace.m in Sources */,
-				D5D092AD1B6537EB008062CF /* TWGDataProvider.m in Sources */,
-				D5D092C41B657D6A008062CF /* TWGPlaceCollection.m in Sources */,
-				D5D092B11B653823008062CF /* Constants.m in Sources */,
+				D5428D271B81D0B300061C5E /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,11 +719,15 @@
 				D5AA8C0C1B6596550074436B /* PlaceRowController.m in Sources */,
 				D5A75F4C1B600BF900C444DF /* ExtensionDelegate.m in Sources */,
 				D5AA8C051B6593B50074436B /* PlacesListInterfaceController.m in Sources */,
+				D5428D251B81D01900061C5E /* TWGDataProvider.m in Sources */,
 				D5CFE3171B63F93400E1683C /* ExtensionDelegate+WCSessionDelegate.m in Sources */,
+				D5428D241B81D01000061C5E /* TWGPlace.m in Sources */,
 				D5A75F491B600BF900C444DF /* RootInterfaceController.m in Sources */,
 				D5A75F4F1B600BF900C444DF /* NotificationController.m in Sources */,
 				D5D092BE1B657937008062CF /* RootInterfaceController+CLLocationManagerDelegate.m in Sources */,
 				D5AA8C081B6595110074436B /* PlaceInterfaceController.m in Sources */,
+				D5428D231B81D00500061C5E /* TWGPlaceCollection.m in Sources */,
+				D5428D221B81CFF600061C5E /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,10 +735,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5CFE30A1B63CC1200E1683C /* TWGPlace.m in Sources */,
-				D5D092AE1B6537EC008062CF /* TWGDataProvider.m in Sources */,
-				D5D092C51B657D6A008062CF /* TWGPlaceCollection.m in Sources */,
-				D5D092B21B653825008062CF /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,11 +755,6 @@
 			isa = PBXTargetDependency;
 			target = D5A75F331B600BF900C444DF /* Therewego Watch App */;
 			targetProxy = D5A75F531B600BF900C444DF /* PBXContainerItemProxy */;
-		};
-		D5D092B61B653C37008062CF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D5A75F631B600FD800C444DF /* TherewegoKit (WatchOS) */;
-			targetProxy = D5D092B51B653C37008062CF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
