@@ -44,7 +44,7 @@
 }
 
 -(void)configureTable {
-    int placesCount = [[TWGPlaceCollection sharedInstance].places count];
+    int placesCount = [[[TWGPlaceCollection sharedInstance] getPlaces] count];
     
     [self.placesList setNumberOfRows:placesCount withRowType:@"PlaceCell"];
     
