@@ -9,10 +9,10 @@
 #import <WatchKit/WatchKit.h>
 
 //! Project version number for TherewegoKitWatch.
-FOUNDATION_EXPORT double TherewegoKitWatchVersionNumber;
+FOUNDATION_EXPORT double TherewegoKitVersionNumber;
 
 //! Project version string for TherewegoKitWatch.
-FOUNDATION_EXPORT const unsigned char TherewegoKitWatchVersionString[];
+FOUNDATION_EXPORT const unsigned char TherewegoKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <TherewegoKitWatch/PublicHeader.h>
 
